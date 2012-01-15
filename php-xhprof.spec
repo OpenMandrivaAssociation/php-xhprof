@@ -6,7 +6,7 @@
 Summary:	A Hierarchical Profiler for PHP
 Name:		php-%{modname}
 Version:	0.9.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		Development/PHP
 License:	Apache License
 URL:		http://pecl.php.net/package/xhprof/
