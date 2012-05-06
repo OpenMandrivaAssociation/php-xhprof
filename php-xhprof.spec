@@ -11,8 +11,9 @@ Group:		Development/PHP
 License:	Apache License
 URL:		http://pecl.php.net/package/xhprof/
 Source0:	http://pecl.php.net/get/xhprof-%{version}.tgz
-Patch0:		xhprof-0.9.2-make_it_php_aware.diff
 Source1:	B22_xhprof.ini
+Patch0:		xhprof-0.9.2-make_it_php_aware.diff
+Patch1:		xhprof-0.9.2-php54x.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -30,6 +31,7 @@ aggregate results from multiple runs.
 
 %setup -q -n %{modname}-%{version}
 %patch0 -p1
+%patch1 -p0
 
 mv extension/* .
 
