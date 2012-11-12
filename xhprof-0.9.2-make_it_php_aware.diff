@@ -1,0 +1,64 @@
+diff -Naur xhprof-0.9.2/examples/sample.php xhprof-0.9.2.oden/examples/sample.php
+--- xhprof-0.9.2/examples/sample.php	2009-06-01 19:52:32.000000000 +0200
++++ xhprof-0.9.2.oden/examples/sample.php	2011-11-16 13:05:12.839355854 +0100
+@@ -26,9 +26,9 @@
+ print_r($xhprof_data);
+ 
+ 
+-$XHPROF_ROOT = realpath(dirname(__FILE__) .'/..');
+-include_once $XHPROF_ROOT . "/xhprof_lib/utils/xhprof_lib.php";
+-include_once $XHPROF_ROOT . "/xhprof_lib/utils/xhprof_runs.php";
++$XHPROF_ROOT = '/usr/share/php/xhprof');
++include_once $XHPROF_ROOT . "/utils/xhprof_lib.php";
++include_once $XHPROF_ROOT . "/utils/xhprof_runs.php";
+ 
+ // save raw data for this profiler run using default
+ // implementation of iXHProfRuns.
+diff -Naur xhprof-0.9.2/xhprof_html/callgraph.php xhprof-0.9.2.oden/xhprof_html/callgraph.php
+--- xhprof-0.9.2/xhprof_html/callgraph.php	2009-06-01 19:52:32.000000000 +0200
++++ xhprof-0.9.2.oden/xhprof_html/callgraph.php	2011-11-16 12:59:01.369945080 +0100
+@@ -31,7 +31,7 @@
+ 
+ // by default assume that xhprof_html & xhprof_lib directories
+ // are at the same level.
+-$GLOBALS['XHPROF_LIB_ROOT'] = dirname(__FILE__) . '/../xhprof_lib';
++$GLOBALS['XHPROF_LIB_ROOT'] = '/usr/share/php/xhprof';
+ 
+ include_once $GLOBALS['XHPROF_LIB_ROOT'].'/display/xhprof.php';
+ 
+diff -Naur xhprof-0.9.2/xhprof_html/index.php xhprof-0.9.2.oden/xhprof_html/index.php
+--- xhprof-0.9.2/xhprof_html/index.php	2009-06-01 19:52:32.000000000 +0200
++++ xhprof-0.9.2.oden/xhprof_html/index.php	2011-11-16 12:59:55.687297468 +0100
+@@ -33,7 +33,7 @@
+ 
+ // by default assume that xhprof_html & xhprof_lib directories
+ // are at the same level.
+-$GLOBALS['XHPROF_LIB_ROOT'] = dirname(__FILE__) . '/../xhprof_lib';
++$GLOBALS['XHPROF_LIB_ROOT'] = '/usr/share/php/xhprof';
+ 
+ include_once $GLOBALS['XHPROF_LIB_ROOT'].'/display/xhprof.php';
+ 
+diff -Naur xhprof-0.9.2/xhprof_html/typeahead.php xhprof-0.9.2.oden/xhprof_html/typeahead.php
+--- xhprof-0.9.2/xhprof_html/typeahead.php	2009-06-01 19:52:32.000000000 +0200
++++ xhprof-0.9.2.oden/xhprof_html/typeahead.php	2011-11-16 12:59:27.221112789 +0100
+@@ -23,7 +23,7 @@
+ 
+ // by default assume that xhprof_html & xhprof_lib directories
+ // are at the same level.
+-$GLOBALS['XHPROF_LIB_ROOT'] = dirname(__FILE__) . '/../xhprof_lib';
++$GLOBALS['XHPROF_LIB_ROOT'] = '/usr/share/php/xhprof';
+ 
+ include_once $GLOBALS['XHPROF_LIB_ROOT'].'/display/xhprof.php';
+ 
+diff -Naur xhprof-0.9.2/xhprof_lib/display/xhprof.php xhprof-0.9.2.oden/xhprof_lib/display/xhprof.php
+--- xhprof-0.9.2/xhprof_lib/display/xhprof.php	2009-06-01 19:52:32.000000000 +0200
++++ xhprof-0.9.2.oden/xhprof_lib/display/xhprof.php	2011-11-16 13:00:36.769564022 +0100
+@@ -30,7 +30,7 @@
+ 
+ if (!isset($GLOBALS['XHPROF_LIB_ROOT'])) {
+   // by default, the parent directory is XHPROF lib root
+-  $GLOBALS['XHPROF_LIB_ROOT'] = realpath(dirname(__FILE__) . '/..');
++  $GLOBALS['XHPROF_LIB_ROOT'] = '/usr/share/php/xhprof');
+ }
+ 
+ include_once $GLOBALS['XHPROF_LIB_ROOT'].'/utils/xhprof_lib.php';
