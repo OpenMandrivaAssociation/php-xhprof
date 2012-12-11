@@ -83,3 +83,22 @@ rm -rf %{buildroot}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
 %{_datadir}/php/xhprof
 
+
+
+%changelog
+* Sun May 06 2012 Oden Eriksson <oeriksson@mandriva.com> 0.9.2-3mdv2012.0
++ Revision: 796973
+- fix build
+- rebuild for php-5.4.x
+
+* Sun Jan 15 2012 Oden Eriksson <oeriksson@mandriva.com> 0.9.2-2
++ Revision: 761345
+- rebuild
+
+* Wed Nov 16 2011 Oden Eriksson <oeriksson@mandriva.com> 0.9.2-1
++ Revision: 730911
+- import php-xhprof
+
+
+* Wed Nov 16 2011 Oden Eriksson <oeriksson@mandriva.com> 0.9.2-1mdv2010.2
+- initial Mandriva package
