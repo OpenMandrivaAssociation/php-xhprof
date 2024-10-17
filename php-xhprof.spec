@@ -9,7 +9,7 @@ Version:	0.9.2
 Release:	4
 Group:		Development/PHP
 License:	Apache License
-URL:		http://pecl.php.net/package/xhprof/
+URL:		https://pecl.php.net/package/xhprof/
 Source0:	http://pecl.php.net/get/xhprof-%{version}.tgz
 Source1:	B22_xhprof.ini
 Patch0:		xhprof-0.9.2-make_it_php_aware.diff
