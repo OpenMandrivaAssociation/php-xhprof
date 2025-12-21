@@ -14,6 +14,11 @@ Source0:	http://pecl.php.net/get/xhprof-%{version}.tgz
 Source1:	B22_xhprof.ini
 Patch0:		xhprof-0.9.2-make_it_php_aware.diff
 Patch1:		xhprof-0.9.2-php54x.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
